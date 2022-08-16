@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  app:
+  app_file_service:
     build: .
     entrypoint: sh -c "npm install && npm run start:dev"
     env_file: 
       - .env
     ports:
-      - 3000:3000
+      - 3001:3001
     volumes:
-      - .:/home/node/app
+      - .:/home/node/app_file_service
